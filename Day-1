@@ -1,0 +1,10 @@
+* get on integer num  as input and find sum of digits of given number.
+
+  int main()
+  {
+  int digit,num,sum=0;
+  print("enter a number");
+  scanf("%d",&num);
+  while(num<0)
+  digit=num%10
+  sum=
