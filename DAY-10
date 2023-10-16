@@ -1,0 +1,32 @@
+PROGRAM:
+Odd string
+
+CODE:
+def sep_odd(input_string):
+    oddstring=" "
+    for i in range(len(input_string)):
+        if i%2 !=0:
+            oddstring=oddstring+str(int(input_string[i])**2)
+    return oddstring
+s=input()
+print(sep_odd(s)[:5:])
+_________________________________________________________________________________________________________________________________________________________________________________________________________
+PROGRAM
+
+s=input()
+loss=s.split(',')
+op=''
+for i in loss:
+    nc=i.split(':')
+    name=nc[0]
+    code=nc[1]
+    max=0
+    for i in code:
+        if int(i)>max and int(i)<=len(name):
+            max=int(i)
+    if max==0:
+        
+        op+='X'
+    else:
+        op+=name[max-1]
+print(op)
