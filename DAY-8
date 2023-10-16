@@ -1,0 +1,77 @@
+PROGRAM:
+Selection sort
+
+CODE:
+#include <stdio.h>
+int main(){
+    int i,j,n,a[100];
+    printf("enter number of sorted array");
+    scanf("%d",&n);
+    for(i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=i+1;j<n;j++)
+        {
+            if(a[i]>a[j])
+            {
+                int temp=a[j];
+                a[j]=a[i];
+                a[i]=temp;
+            }
+        }
+    }
+    for(i=0;i<n;i++){
+        printf("%d ",a[i]);
+    }
+}
+_____________________________________________________________________________________________________________________________________________________________________________
+PROGRAM:
+Quick sort
+
+CODE:
+def quicksort(arr):
+    if len(arr) <= 1:
+        return arr
+
+    pivot = arr[len(arr) // 2]
+    left = [x for x in arr if x < pivot]
+    middle = [x for x in arr if x == pivot]
+    right = [x for x in arr if x > pivot]
+    return quicksort(left) + middle + quicksort(right)
+my_list = [3, 6, 8, 10, 1, 2, 1]
+sorted_list = quicksort(my_list)
+print(sorted_list)
+---------------------------------------------------------------------------------------------------------------------------------------------------
+PROGRAM:
+Merge sort
+
+CODE:
+def merge_sort(arr):                                      
+    if len(arr) <= 1:                                     
+        return arr                                        
+    middle = len(arr) // 2                                
+    left_half = arr[:middle]                              
+    right_half = arr[middle:]                             
+    left_half = merge_sort(left_half)                     
+    right_half = merge_sort(right_half)                   
+    return merge(left_half, right_half)                   
+def merge(left, right):                                   
+    result = []                                           
+    left_idx, right_idx = 0, 0                            
+                                                          
+    while left_idx < len(left) and right_idx < len(right):
+        if left[left_idx] < right[right_idx]:             
+            result.append(left[left_idx])                 
+            left_idx += 1                                 
+        else:                                             
+            result.append(right[right_idx])               
+            right_idx += 1                                
+    result.extend(left[left_idx:])                        
+    result.extend(right[right_idx:])                      
+    return result                                         
+my_list = [3, 6, 8, 10, 1, 2, 1]                          
+sorted_list = merge_sort(my_list)                         
+print(sorted_list)   
+__________________________________________________________________________________________________________________________________________________________________________________________________________
