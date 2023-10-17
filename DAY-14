@@ -1,0 +1,45 @@
+PROGRAM:
+Permuitations
+
+CODE: 
+def permute(arr):
+    if len(arr) == 1:
+        return [arr]
+    ans = []
+    for i in range(len(arr)):
+        temp_ans = [arr[i]]
+        sub_arr = arr[0:i]+arr[i+1 :]
+        p_arr = permute(sub_arr)
+        for e in p_arr:
+            ans.append(temp_ans+e)
+    return ans
+
+print(permute([1,2,3]))
+___________________________________________________________________________________________________________________________________________________________________________________________________________
+PROGRAM:
+Fibonacci
+
+CODE:
+def sum_till_nth(n):
+def nth_fibonaci_number(n):
+    if n==1 or n==2:
+        return n-1
+    return nth_fibonaci_number(n-1)+nth_fibonaci_number(n-2)
+
+print(nth_fibonaci_number(10))
+____________________________________________________________________________________________________________________________________________________________________________________________________
+PROGARM:
+N_ways
+
+CODE:
+def find_number_of_ways(n):
+    if n==1:
+        return 1
+    if n<=0:
+        return 0
+    return find_number_of_ways(n-1)+find_number_of_ways(n-2)+find_number_of_ways(n-3)
+
+print(find_number_of_ways(5))
+_________________________________________________________________________________________________________________________________________________________________________________
+
+
