@@ -2,3 +2,38 @@ PROGRAM:
 Linear search
 
 CODE:
+//linear search
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+	int a[100],i,n,found=0,search;
+	printf("enter the size");
+	scanf("%d",&n);
+	printf("\nenter elements");
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	for(i=0;i<n;i++)
+	{
+		printf("%d\t",a[i]);
+	}
+	//..searching...
+	printf("\nenter element to search");
+	scanf("%d",&search);
+	for(i=0;i<n;i++)
+	{
+	if(search==a[i])
+	{
+		printf("element found");
+		printf("\nelement found at location %d",i);
+		found=1;
+		break;
+	}
+}
+	if(found==0)
+	{
+		printf("element not found");
+	}
+}
