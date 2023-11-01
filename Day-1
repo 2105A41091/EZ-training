@@ -1,5 +1,7 @@
-* get on integer num  as input and find sum of digits of given number.
+PROGRAM:
+Write a program to get on integer num  as input and find sum of digits of given number.
 
+CODE:
   int main()
   {
   int digit,num,sum=0;
@@ -7,4 +9,4 @@
   scanf("%d",&num);
   while(num<0)
   digit=num%10
-  sum=
+ _______________________________________________________________________________________________________________________________________________________________________
